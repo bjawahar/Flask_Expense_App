@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Household Expense Tracker</title>
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/main.css" rel="stylesheet">
+</head>
+<body>
+ <div class="container">
+    <h1>Collecting Your Spendings</h1>
+    <h3>Please enter your Household expenses</h3>
+    <form action="{{url_for('success')}}" method="post">
+      <table align="center">
+        <tr>
+            <td align="right">Date:</td>
+            <td align="left"><input  placeholder="Enter the transaction date" type="date" name="transaction_date" required>
+        </tr>
+        <!--Category: <input placeholder="Enter the type of expense" type="text" name="expense_type" required> <br>-->
+        <tr>
+            <td align="right">Category:</td>
+            <td align="left"><select name="expense_type" required>
+                                <option value="Bills">Bills</option>
+                                <option value="Groceries">Groceries</option>
+                                <option value="Entertainment">Entertainment</option>
+                             </select>
+            </td>
+        </tr>
+
+        <!--Sub-Category: <input placeholder="Enter the sub category of expense" type="text" name="expense_sub_type"> <br> -->
+        <tr>
+            <td aign="right">Sub-Category:</td>
+            <td align="left"><select name="expense_sub_type">
+                               <option value="Electricity">Movie</option>
+                               <option value="Water">Water</option>
+                               <option value="Sewer">Sewer</option>
+                               <option value="Internet">Internet</option>
+                               <option value="Phone">Phone</option>
+                               <option value="Movie">Movie</option>
+                               <option value="Restaurant">Restaurant</option>
+                               <option value="Amusement">Amusement</option>
+                               <option value="Outdoor">Outdoor</option>
+                             </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Business Name:</td>
+            <td align="left"><input  placeholder="Enter the business name" type="text" name="business_nm">
+        </tr>
+        <tr>
+            <td align="right">Amount:</td>
+            <td align="left"><input placeholder="Enter the amount spent" type="number" step="any" name="amount_spent" required></td>
+        </tr>
+      </table>
+        <button type="submit"> Submit </button>
+
+    </form>
+ <div>
+</body>
+</html>
+
